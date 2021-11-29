@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <center>
+        <h1>Submit your Application</h1>
+    </center>
+    <center>
+        <p>for <b>.net Developer (Fresher)</b></p>
+    </center>
+    <div id="outline">
+        <h4>Personal Information</h4>
+        <form onsubmit="return validate()" action="#">
+            <!--Names-->
+            <div class="section">
+                <legend class="legendstatic">Name as per ID proof <sup>*</sup>
+                    
+                </legend>
+                
+
+                <input type="text" id="name" placeholder="Name">
+                <label id="lname">Invalid Name</label>
+            </div>
+            <div class="section">
+
+                <legend class="legendstatic">Father's Name <sup>*</sup></legend>
+                <input type="text" id="fathername" placeholder="Father's Name">
+                <label id="lname">Invalid Name</label>
+            </div>
+            <br>
+            <!--Email DateOfBirth PhoneNumber-->
+            <div class="section">
+
+                <legend class="legendstatic">Email <sup>*</sup></legend>
+                <input type="text" id="email" placeholder="Example@mail.com">
+                <label for="email" id="lmail"> Invalid Mail</label>
+            </div>
+            <div class="section">
+                <div class="sectionpart">
+                    <legend class="legendstatic">Date of Birth <sup>*</sup></legend>
+                    <input type="text" id="dateofbirth" placeholder="DD-MM-YYYY">
+                    <label for="dateofbirth" id="ldob"> Invalid Date of birth</label>
+                </div>
+                <div class="sectionpart">
+
+                    <legend class="legendstatic">Phone number <sup>*</sup></legend>
+                    <input type="text" id="phone" placeholder="Phone Number">
+                    <label for="phone" id="lphone"> Invalid Phone Numeber</label>
+                </div>
+            </div>
+            <br>
+            <!--CurrentAddress-->
+            <div class="section">
+
+                <legend class="legendstatic">Current Address <sup>*</sup></legend>
+                <input type="text" id="currentAddressLine1" placeholder="Address Line 1">
+            </div>
+            <div class="section">
+
+                <input type="text" id="currentAddressLine2" placeholder="Address Line 2">
+            </div><br><br>
+            <div class="section">
+                <div class="sectionpart">
+                    <input type="text" id="currentCity" placeholder="City">
+                </div>
+
+
+                <div class="sectionpart">
+                    <select name="state" id="currentState">
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Kerla">Kerla</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section">
+                <input type="text" id="currentPinCode" placeholder="PinCode">
+                <label for="currentPinCode" id="lpincode">Invalid Pin Code</label>
+
+            </div><br>
+            <!--Copy Address-->
+
+            <input type="checkbox" id="checking" onclick="copyAddress()">Same as Current Address
+            <br><br>
+            <!--PermanantAddress-->
+            <div class="section">
+                <legend class="legendstatic">Permanant Address <sup>*</sup></legend>
+                <input type="text" id="permanantAddressLine1" placeholder="Address Line 1">
+            </div>
+
+            <div class="section">
+                <input type="text" id="permanantAddressLine2" placeholder="Address Line 2">
+            </div><br> <br>
+
+            <div class="section">
+                <div class="sectionpart">
+                    <input type="text" id="permanantCity" placeholder="City">
+                </div>
+
+                <div class="sectionpart">
+                    <select name="state" id="permanantState">
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Kerla">Kerla</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section">
+                <input type="text" id="permanantPinCode" placeholder="PinCode">
+            </div><br><br><br>
+
+            <p>Upload Profile Photo ( JPG/PNG format only )</p>
+            <p>Please upload a photo of yourself. Your face should be clearly visible.
+                Makesure the image size does not
+                exceed 500KB.</p> <br><br>
+
+
+            <label for="filephoto1" id="lphoto">UPLOAD PHOTO</label> <input type="file" id="filephoto1" hidden><label
+                id="lphotoshow"></label>
+            <br><br>
+            <input type="submit" id="submit" value="Validate">
+        </form>
+    </div>
+</body>
+
+</html>
